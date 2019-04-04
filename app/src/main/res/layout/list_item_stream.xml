@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/streamer_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/h1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Ninja" />
+
+    <TextView
+        android:id="@+id/stream_game_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/streamer_name"
+        tools:text="Fortnite" />
+
+    <TextView
+        android:id="@+id/stream_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Live" />
+
+    <TextView
+        android:id="@+id/stream_viewers_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_very_small"
+        android:text="@string/current_viewers"
+        app:layout_constraintBaseline_toBaselineOf="@id/stream_viewers"
+        app:layout_constraintEnd_toStartOf="@id/stream_viewers" />
+
+    <TextView
+        android:id="@+id/stream_viewers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@id/stream_game_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="1203" />
+
+</android.support.constraint.ConstraintLayout>
